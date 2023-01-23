@@ -34,6 +34,7 @@
                         </div>
                     </div>
                 </div>
+                <a href="../Index.aspx">Regresar...</a>
             </center>
         </div>
     </form>

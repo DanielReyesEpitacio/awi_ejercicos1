@@ -63,6 +63,14 @@ namespace AccesoADB.paginas
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            string id = DropDownList1.SelectedValue;
+
+            ds = dt.ObtenerProductosId(id);
+
+            Label1.Text = ds.Tables[0].Rows[0]["idproducto"].ToString();
+            Label2.Text = ds.Tables[0].Rows[0]["NombreProducto"].ToString();
+            Label3.Text = ds.Tables[0].Rows[0]["Descripcion"].ToString();
+            Label4.Text = ds.Tables[0].Rows[0]["PrecioUnitario"].ToString();
         }
     }
 }

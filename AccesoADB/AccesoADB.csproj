@@ -88,6 +88,7 @@
     <Content Include="indi.html" />
     <Content Include="paginas\ProductoDs.aspx" />
     <Content Include="paginas\ProductoId.aspx" />
+    <Content Include="paginas\ProductoNombre.aspx" />
     <Content Include="paginas\productosDr.aspx" />
     <Content Include="Pops\popper.min.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -123,6 +124,13 @@
     </Compile>
     <Compile Include="paginas\ProductoId.aspx.designer.cs">
       <DependentUpon>ProductoId.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\ProductoNombre.aspx.cs">
+      <DependentUpon>ProductoNombre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\ProductoNombre.aspx.designer.cs">
+      <DependentUpon>ProductoNombre.aspx</DependentUpon>
     </Compile>
     <Compile Include="paginas\productosDr.aspx.cs">
       <DependentUpon>productosDr.aspx</DependentUpon>

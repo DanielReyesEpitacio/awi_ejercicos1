@@ -4,7 +4,9 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Web;
+using System.Web.UI.WebControls;
 
 namespace AccesoADB.Models
 {
@@ -110,6 +112,28 @@ namespace AccesoADB.Models
             return dr;
         }
 
+        public SqlDataReader ConsultaReader(String query) 
+        {
+            SqlDataReader dr = null;
+            SqlCommand dbCommand = new SqlCommand();
+            Cn = new SqlConnection(dbconexion);
+            string consulta = query;
+            dbCommand.CommandText = consulta;
+            dbCommand.Connection = Cn;
+            try
+            {
+                Cn.Open();
+                dr = dbCommand.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                Error = e.Message;
+                Cn.Close();
+                return null;
+            }
+            return dr;
+        }
+
         public DataTable LlenarDropDownId()
         {
             DataTable dt = new DataTable();
@@ -135,6 +159,62 @@ namespace AccesoADB.Models
             dbbCommand.Connection.Close();
             dbbCommand.Dispose();
             adapter.Dispose();
+
+            return dt;
+        }
+
+        public DataSet ObtenerProductosId(string id)
+        {
+            DataSet ds = new DataSet();
+            Cn = new SqlConnection(dbconexion);
+            SqlCommand dboman = new SqlCommand();
+            string consulta = "SELECT * FROM productos where idproducto =" + id;
+
+            dboman.CommandText = consulta;
+            dboman.Connection = Cn;
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.SelectCommand = dboman;
+
+            try
+            {
+                adapter.Fill(ds);
+            }
+            catch (Exception e)
+            {
+                Error = e.Message;
+            }
+
+            dboman.Connection.Close();
+            dboman.Dispose();
+            adapter.Dispose();
+
+            return ds;
+            
+        }
+
+        public DataTable LlenarDropDown_Nombre()
+        {
+            DataTable dt = new DataTable();
+            Cn = new SqlConnection(dbconexion);
+            string consulta = "SELECT NombreProducto FROM productos";
+
+            SqlCommand dbCommand = new SqlCommand();
+            dbCommand.CommandText = consulta;
+            dbCommand.Connection = Cn;
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+
+            adapter.SelectCommand = dbCommand;
+
+            try
+            {
+                adapter.Fill(dt);
+            }
+            catch (Exception e) 
+            {
+                Error = e.Message;
+            }
 
             return dt;
         }
