@@ -86,6 +86,7 @@
     <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
     <Content Include="indi.html" />
+    <Content Include="paginas\Producto.aspx" />
     <Content Include="paginas\ProductoDs.aspx" />
     <Content Include="paginas\ProductoId.aspx" />
     <Content Include="paginas\ProductoNombre.aspx" />
@@ -111,6 +112,13 @@
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\datos.cs" />
+    <Compile Include="paginas\Producto.aspx.cs">
+      <DependentUpon>Producto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\Producto.aspx.designer.cs">
+      <DependentUpon>Producto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="paginas\ProductoDs.aspx.cs">
       <DependentUpon>ProductoDs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

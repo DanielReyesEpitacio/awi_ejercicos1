@@ -38,7 +38,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link dropdown-toggle text-bg-dark text-white ms-4" href="#">Agregar</a>
+                            <a class="nav-link dropdown-toggle text-bg-dark text-white ms-4" href="paginas/Producto.aspx">Agregar producto</a>
                         </li>
                         </li>
                     </ul>

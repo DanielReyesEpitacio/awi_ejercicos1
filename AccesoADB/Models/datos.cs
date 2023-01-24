@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -217,6 +218,12 @@ namespace AccesoADB.Models
             }
 
             return dt;
+        }
+
+        public bool agregarProducto()
+        {
+            bool salida = false;
+            string consutla = "insert into productos";
         }
 
     }
