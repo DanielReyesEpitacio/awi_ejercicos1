@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AccesoADB.paginas
-{
-
-
-    public partial class Producto
-    {
-
+namespace AccesoADB.paginas {
+    
+    
+    public partial class Producto {
+        
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -22,52 +20,52 @@ namespace AccesoADB.paginas
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
+        
         /// <summary>
-        /// text1 control.
+        /// txtNombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText text1;
-
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtNombre;
+        
         /// <summary>
-        /// text2 control.
+        /// txtDescripcion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText text2;
-
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtDescripcion;
+        
         /// <summary>
-        /// text3 control.
+        /// txtImagen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText text3;
-
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtImagen;
+        
         /// <summary>
-        /// text4 control.
+        /// txtPrecio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText text4;
-
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtPrecio;
+        
         /// <summary>
-        /// text control.
+        /// txtCategoria control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText text;
-
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtCategoria;
+        
         /// <summary>
         /// agregar_producto control.
         /// </summary>

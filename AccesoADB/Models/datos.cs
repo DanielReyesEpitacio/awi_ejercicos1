@@ -223,8 +223,40 @@ namespace AccesoADB.Models
         public bool agregarProducto()
         {
             bool salida = false;
-            string consutla = "insert into productos";
+            string consutla = "insert into productos" + "(NombreProducto, Descripcion, ImagenPath, PrecioUnitario, IdCategoria) values" +
+                " (@IdProducto, @NombreP, @Descripcion, @Imagen, @Precio, @IdCategoria)";
+            Cn = new SqlConnection(dbconexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = consutla;
+            cmd.Connection = Cn;
+            cmd.Parameters.Add(new SqlParameter("@NombreP", SqlDbType.NVarChar,100));
+            cmd.Parameters["@NombreP"].Value = NombreProducto;
+            cmd.Parameters.Add(new SqlParameter("@Descripcion", SqlDbType.NVarChar, 100));
+            cmd.Parameters["@Descripcion"].Value = Descripcion;
+            cmd.Parameters.Add(new SqlParameter("@Imagen", SqlDbType.NVarChar, 100));
+            cmd.Parameters["@Imagen"].Value = ImagenPath;
+            cmd.Parameters.Add(new SqlParameter("@Precio", SqlDbType.Float));
+            cmd.Parameters["@Precio"].Value = PrecioUnitario;
+            cmd.Parameters.Add(new SqlParameter("@IdCategoria", SqlDbType.Int));
+            cmd.Parameters["@IdCategoria"].Value = IdCategoria;
+
+            try
+            {
+                Cn.Open();
+                salida = cmd.ExecuteNonQuery() != 0;
+
+            }
+            catch (Exception e)
+            {
+                Error = e.Message;
+            }
+
+            cmd.Connection.Close();
+            cmd.Dispose();
+
+            return salida;
         }
+        
 
     }
 }

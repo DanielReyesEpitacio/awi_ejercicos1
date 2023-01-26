@@ -17,30 +17,30 @@
             </center>
             <div class="mb-3">
                 <label class="form-label">Nombre Producto</label>
-                <input id="text1" type="text" runat="server" required pattern="[A-Za-z áéíóú]" title="Capture solo texto" class="form-control" />
+                <input id="txtNombre" type="text" runat="server"  title="Capture solo texto" class="form-control" />
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Descripcion</label>
-                <input id="text2" type="text" runat="server" required pattern="[A-Za-z-áéíóú. 0-9]" title="Se permiten solo texto, digitos, espacios y puntos" class="form-control" />
+                <input id="txtDescripcion" type="text" runat="server" required title="Se permiten solo texto, digitos, espacios y puntos" class="form-control" />
             </div>
 
            <div class="mb-3">
                 <label class="form-label">NombreImagen</label>
-                <input id="text3" type="text" runat="server" required pattern="[A-Za-z áéíóú. 0-9_-]" title="No se permiten caracteres especiales" class="form-control" />
+                <input id="txtImagen" type="text" runat="server" required title="No se permiten caracteres especiales" class="form-control" />
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Precio unitario</label>
-                <input id="text4" type="text" runat="server" required pattern="[0-9.]+" title="Capture digitos y un punto decimal" class="form-control" />
+                <input id="txtPrecio" type="text" runat="server"  title="Capture digitos y un punto decimal" class="form-control" />
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Id categoria</label>
-                <input id="text" type="text" runat="server" required pattern="[0-9]" title="Capture solo números" class="form-control" />
+                <input id="txtCategoria" type="text" runat="server"  title="Capture solo números" class="form-control" />
             </div>
             <div class="mb-5">
-                <asp:Button ID="agregar_producto" runat="server" Text="Agregar producto" CssClass="btn-outline-warning"/>
+                <asp:Button ID="agregar_producto" runat="server" Text="Agregar producto" CssClass="btn-outline-warning" OnClick="agregar_producto_Click"/>
             </div>
         </div>
     </form>
